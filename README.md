@@ -6,19 +6,21 @@ Example function to decode EventGridTopic CloudEvent Schema V1.0 for Microsoft F
 
 The Microsoft Fabric (enhanced) eventstream cannot cope with messages formatted in the CloudEvent Schema V1.0 format.
 
-Using this function CloudEvents sent by an EventGrid Topic via a webhook subscription, the base64 data is made available as JSON string.
+Using this function CloudEvents are sent by an EventGrid Topic via a webhook subscription, the base64 data is made available as JSON string.
+
+See also those [blog post](https://sandervandevelde.wordpress.com/2024/08/02/microsoft-fabric-rti-derived-streams-in-the-real-time-hub/) for the full details.
 
 ## Flow
 
 This function ingests telemetry from an EventGrid Topic webhook endpoint subscription
 
-The messages data field is sent towards a custom source in a Microsoft Fabric Eventstream using the EventHub credentials
+The messages data field is sent to a custom source in a Microsoft Fabric Eventstream using the EventHub credentials
 
 ## Environment variable
 
 The Microsoft Fabric Eventstream custom source EventHub credentials must be made available in an Environment variable.
 
-Please provide the connectionstring:
+Please provide the connection string:
 
 ```
 CustomAppEndpoint
